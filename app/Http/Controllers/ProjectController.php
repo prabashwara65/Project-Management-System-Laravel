@@ -16,10 +16,10 @@ class ProjectController extends Controller
     {
 
         $query = Project::query();
-        $Projects = $query->paginate(10)->onEachSide(1);
+        $projects = $query->paginate(10)->onEachSide(1);
 
         return inertia("Project/Index" , [
-            "Projects" => ProjectResource::collection($Projects),
+            "projects" => ProjectResource::collection($projects),
 
         ]);
     }
