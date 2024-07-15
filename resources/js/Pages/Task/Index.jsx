@@ -9,7 +9,7 @@ import {
 import { Head, Link, router } from "@inertiajs/react";
 import TableHeading from "@/Components/TableHeading";
 
-export default function Index({ auth, projects, queryParams = null, success }) {
+export default function Index({ auth, tasks, queryParams = null, success }) {
   queryParams = queryParams || {};
   const searchFieldChanged = (name, value) => {
     if (value) {
@@ -164,7 +164,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                     </tr>
                   </thead>
                   <tbody>
-                    {projects.data.map((task) => (
+                    {tasks.data.map((task) => (
                       <tr
                         className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
                         key={task.id}
@@ -214,7 +214,7 @@ export default function Index({ auth, projects, queryParams = null, success }) {
                   </tbody>
                 </table>
               </div>
-              <Pagination links={projects.meta.links} />
+              <Pagination links={tasks.meta.links} />
             </div>
           </div>
         </div>
