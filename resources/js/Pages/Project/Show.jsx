@@ -24,7 +24,13 @@ export default function Index({ auth, project }) {
                 <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
                     <div className="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                         <div className="p-6 text-gray-900 dark:text-gray-100">
-                            Show
+                            <div>
+                                <img 
+                                    src={project.image_path}
+                                    alt=""
+                                    className="w-full h-64 object-cover"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
