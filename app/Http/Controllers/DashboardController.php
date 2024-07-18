@@ -25,6 +25,14 @@ class DashboardController extends Controller
             ->where('assigned_user_id', $user->id)
             ->count();
 
+            $totalCompletedTasks = Task::query()
+            ->where('status', 'completed')
+            ->count();
+        $myCompletedTasks = Task::query()
+            ->where('status', 'completed')
+            ->where('assigned_user_id', $user->id)
+            ->count();
+
 
         return inertia('Dashboard');
     } 
