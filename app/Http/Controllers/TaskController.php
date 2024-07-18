@@ -47,7 +47,16 @@ class TaskController extends Controller
     /**
      * Show the form for creating a new resource.
      */
- 
+    public function create()
+    {
+        $projects = Project::query()->orderBy('name', 'asc')->get();
+        $users = User::query()->orderBy('name', 'asc')->get();
+
+        return inertia("Task/Create", [
+            'projects' => ProjectResource::collection($projects),
+            'users' => UserResource::collection($users),
+        ]);
+    }
 
     /**
      * Store a newly created resource in storage.
