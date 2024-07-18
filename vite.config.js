@@ -1,3 +1,5 @@
+
+import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
 
@@ -12,3 +14,4 @@ export default defineConfig({
         outDir: 'public/build',
     },
 });
+
