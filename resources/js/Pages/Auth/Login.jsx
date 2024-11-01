@@ -15,6 +15,7 @@ export default function Login({ status, canResetPassword }) {
         remember: false,
     });
 
+    //useeffect for reset passwords
     useEffect(() => {
         return () => {
             reset("password");
